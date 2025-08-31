@@ -1,0 +1,67 @@
+@import "./mixins";
+
+.contact {
+  @include twoColumns(20rem, 0);
+  // grid-template-columns: repeat(2, 1fr);
+  // column-gap: 20rem;
+  align-items: center;
+
+  &__description {
+    font-size: var(--font-size-20);
+    line-height: 1.9;
+    margin: 1rem 0;
+  }
+
+  &__email {
+    font-weight: var(--font-weight-bold);
+    margin: 1rem 0;
+    display: flex;
+  }
+
+  &__social {
+    transition: var(--transition-timing);
+    margin: 2.8rem 0;
+  }
+
+  &__social:hover {
+    transform: scale(1.2);
+  }
+
+  &__inputs {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__input {
+    border: 0;
+    outline: 0;
+    background: var(--color-primary);
+    border-bottom: 0.1rem solid var(--color-input-border);
+    flex: 1;
+    padding: 0.5rem;
+    box-shadow: 0 0 0.8em var(--color-primary);
+    color: white;
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  &__button {
+    background-color: var(--color-link-bg);
+    color: var(--color-white);
+    padding: 1.7rem 1.8rem;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-24);
+    margin-top: 3.4rem;
+    box-shadow: 0 0 0.4em var(--color-primary);
+    cursor: pointer;
+  }
+
+  form:invalid::after {
+    content: "*";
+    font-size: var(--font-size-38);
+    color: var(--color-red);
+  }
+}
