@@ -578,7 +578,7 @@ html:has(.toggle__checkbox:checked) {
     padding: 3rem 0;
     z-index: 1;
   }
-  .pic-content::before {
+  .bio__pic-content::before {
     content: "";
     position: absolute;
     background-color: var(--color-box-img);
