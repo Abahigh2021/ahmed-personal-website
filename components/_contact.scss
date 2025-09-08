@@ -43,6 +43,10 @@
     color: white;
   }
 
+  &__input::placeholder {
+    color: var(--color-text);
+  }
+
   &__textarea {
     width: 100%;
     margin-top: 4rem;
@@ -50,8 +54,8 @@
 
   &__button {
     background-color: var(--color-link-bg);
-    color: var(--color-white);
-    padding: 1.7rem 1.8rem;
+    color: var(--color-text);
+    padding: 1.2rem 1.2rem;
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-24);
     margin-top: 3.4rem;
